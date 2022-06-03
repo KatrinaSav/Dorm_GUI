@@ -5,10 +5,10 @@ from click_shell import shell
 
 def run():
     global our_dorm
-    with open('../saved_step.pickle', 'rb') as f:
+    with open('saved_step.pickle', 'rb') as f:
         our_dorm = pickle.load(f)
     f.close()
-    with open('../saved_step_2.pickle', 'rb') as f:
+    with open('saved_step_2.pickle', 'rb') as f:
         our_dorm.set_room_list(pickle.load(f))
     f.close()
     our_dorm.find_all_students()
